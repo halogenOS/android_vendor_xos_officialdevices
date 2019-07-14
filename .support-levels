@@ -1,0 +1,35 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "description": "Top-level support, maintained by active team member"
+    },
+    {
+      "level": 2,
+      "description": "Maintained by official maintainer"
+    },
+    {
+      "level": 3,
+      "description": "Rare maintenance but still maintained by official maintainer or team member"
+    },
+    {
+      "level": 4,
+      "description": "Poor maintenance, maintainer is about to be kicked out."
+    },
+    {
+      "level": 5,
+      "description": "Device is temporarily not maintained or being worked on. This means there is no official build yet but the maintainer is planning to release one in the future (or not)."
+    },
+    {
+      "level": 6,
+      "description": "Device is no longer being maintained and no support is provided"
+    }
+  ],
+  "supportTypes": {
+    "supported": "This device is supported",
+    "onhold": "Device is being worked on or temporarily not maintained",
+    "unsupported": "Support and maintenance for this device has been discontinued",
+    "maintained": "Device is being maintained but the maintainer does not provide direct support to users",
+    "extsupported": "Device is being maintained but someone else is responsible for support"
+  }
+}
