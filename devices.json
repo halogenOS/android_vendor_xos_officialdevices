@@ -1,3 +1,15 @@
 [
-  
+   {
+      "name":"Samsung Galaxy A5 2015",
+      "brand":"Samsung",
+      "codename":"a5ultexx",
+      "support_level": "6",
+      "support_status": "privateonly",
+      "supported_versions":[
+         {
+            "version_code":"pie",
+            "version_name":"Pie"
+         }
+      ]
+   }
 ]
