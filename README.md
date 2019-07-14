@@ -1,64 +1,79 @@
-# Pixel Experience
+# halogenOS
 ## Official devices application
-
-Devices repository: [PixelExperience-Devices](https://github.com/PixelExperience-Devices)
 
 Before you apply to add your device into our list of official devices, you should know a few things:
 
 Any failure in following the below instructions will make you unfit for the maintainership. No questions asked.
 
-### 1. To turn into a maintainer of PixelExperience:
+### 1. To turn into a maintainer of halogenOS:
 
 1.2 - You must own the device. Blind and untested builds aren't allowed.
 
-1.3 - You must have knowledge of git.
+1.3 - You must have knowledge of git, bash and basic building.
 
-1.4 - You must do an unofficial build for atleast 2 weeks,  be sure that the build is stable for daily usage before applying. Stability context may differ for different devices, so explain for any exceptions.
+1.4 - You must do an unofficial build for at least 2 weeks, be sure that the build is stable for daily usage before applying.
+      Stability context may differ for different devices, so explain for any exceptions.
 
-1.5 - You must have your device sources public.
-
-1.6 - Your device tree must have some required commits. You can check them at [this url](https://github.com/PixelExperience-Devices/required_commits).
+1.5 - You must have your device sources public and up-to-date. Any release must have all source code publicly available in such a way
+      that anyone can build it.
 
 ### 2. Maintainers conduct notes:
 
-2.2 - The maintainers mustn't do any unofficial modifications, except if they're going to push it for acceptance on our [gerrit](https://gerrit.pixelexperience.org).
-Also, a maintainer mustn't send an update to users with unmerged gerrit changes.
+2.2 - The maintainers mustn't do any unofficial modifications. Local changes have to be pushed.
+      Also, a maintainer mustn't send an update to users with unmerged gerrit changes.
 
-2.3 - The maintainers must upload theirs trees on [PixelExperience-Devices](https://github.com/PixelExperience-Devices) organization. The trees should fully reflect the changes when a new build is pushed for that specific device tree. Last but not the least, it should be fully buildable.
+2.3 - The maintainers must arrange repository creation and permission grantin on gerrit with the project leaders. The trees should fully reflect the changes when a new build is pushed for that specific device tree. Last but not the least, it should be fully buildable as mentioned above.
 
-2.4 - The maintainers must test every build before sending OTA update to user.
+2.4 - The maintainers must test or have a trusted person test every build before sending OTA update to user.
 
-2.5 - The maintainers must keep authorship of git commits that are pushed, mandatory for all repository. Force-pushes are acceptable.
+2.5 - The maintainers must keep authorship of git commits that are pushed, mandatory for all repositories.
+      Commit messages have to be meaningful and describe the actual changes.
+      If we find that a repository has too many undocumented non-trivial changes made by the maintainer we will reject the maintainership request
+      until correction.
 
 2.6 - Relationships fights can be done in PM on Telegram or XDA.
 
 2.7 - The maintainers mustn't:
 
-2.7.1 - Add any features in their device specific packages, eg. configpanel, XiaomiParts, etc., like KCAL, force Camera API2, etc. Features that are device specific and are available at stock firmware, eg. Alert Slider and Offscreen gestures for some OnePlus Devices, Fingerprint Gestures and MotoActions for Motorola Devices, are allowed. Dirac Sound is the only exception.
+2.7.1 - Add any changes to the ROM base but are allowed to add device-specific changes to their device-specific repositories only.
 
-2.7.2 - Add Custom build fingerprints (eg. Pixels Build fingerprints), unless the reason of having them it's bypass SafetyNet.
+2.8 - The maintainers are welcome to:
 
-2.7.3 - Add Playground or something else related to get Pixel-like features that aren't available from the ROM sources (only Gcam is acceptable)
+2.8.1 - Add improvements/bugfixes/features to their kernel/device tree as long as they do not affect stability, usability and user experience negatively
 
-### 3. Hosting
+2.8.2 - Submit patches to our [Gerrit](https://review.halogenos.org)
 
-Our files are hosted on our FTP server, you will receive the credentials when you join the team.
+2.8.3 - Merge kernel upstream into their kernel tree if it's done properly
+
+2.9 - We allow our maintainers to:
+
+2.9.1 - Use a custom toolchain as long as it does not affect, remove or interfere with existing toolchains
+
+2.9.2 - Set SELinux to permissive for obsolete/older devices that are required to do so
+
+2.9.3 - Create private testing groups on their preferred messaging platform (e. g. Telegram).
+
+2.9.4 - Upload testing builds publicly as long as they are clearly marked as such and not posted on any public website, channel or group
+        (you can share it in your private testing group)
+
+### 3. Building and hosting
+
+Building is done by one of the project members or trusted maintainers.
+The builds are automatically uploaded to our GitHub release page.
 
 ### 4. Changelog
 For each new version, you need to upload the changelog to this repository in the device specific folder.
+To do so, submit a patch to our Gerrit.
 
 The changelog file name must match the **.zip** file name and should end with **.txt**
 
-Eg: **.zip** is **PixelExperience_potter-8.1.0-20180207-0418-OFFICIAL.zip**, changelog file name should be **PixelExperience_potter-8.1.0-20180207-0418-OFFICIAL.txt**
+Eg: **.zip** is **halogenOS_potter-9.0.0-20190714-0418-OFFICIAL.zip**, changelog file name should be **hhalogenOS_potter-9.0.0-20190714-0418-OFFICIAL.txt**
 
-Maintainers should always try to write a user understable changelog.
+Maintainers should always try to write a user understandable changelog.
 
 ### 5. Over-the-air (OTA) updates
-Our system is automatic, you should not worry about updating some script, just upload the new build to the FTP server and send a pull request with the changelog and also edit your device JSON file (**builds/your_device_codename.json**) in this repository.
 
-Eg: Moto G 2013 is called **falcon**, so the device JSON file is **builds/falcon.json**
-
-**Note:** New builds can take up to 30 minutes to appear on the site and in the OTA application.
+We do not support OTA updates yet.
 
 ### 6. JSON params
 
@@ -81,4 +96,4 @@ Eg: Moto G 2013 is called **falcon**, so the device JSON file is **builds/falcon
 | file_size | Build file (.zip) size (in bytes) | Yes |
 | md5 | Build file (.zip) md5 hash | Yes |
 
-If you agree with everything, please [fill this form](https://forms.gle/b7kjDzsT2RrRh7WCA)
+If you agree with everything, contact a project member.
