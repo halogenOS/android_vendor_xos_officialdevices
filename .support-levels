@@ -31,6 +31,6 @@
     "unsupported": "Support and maintenance for this device has been discontinued",
     "maintained": "Device is being maintained but the maintainer does not provide direct support to users",
     "extsupported": "Device is being maintained but someone else is responsible for support",
-    "privateonly": "This device is not officially supported but should work since the maintainer uses it"
+    "privateonly": "This device is not officially supported but should work since the maintainer uses it or has one or more testers"
   }
 }
