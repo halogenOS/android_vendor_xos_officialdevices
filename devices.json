@@ -1,28 +1,2 @@
 [
-   {
-      "name":"Samsung Galaxy A5 2015",
-      "brand":"Samsung",
-      "codename":"a5ultexx",
-      "support_level": "6",
-      "support_status": "privateonly",
-      "supported_versions":[
-         {
-            "version_code":"XOS-9.0",
-            "version_name":"Pie"
-         }
-      ]
-   },
-   {
-      "name":"Samsung Galaxy S6 LTE International",
-      "brand":"Samsung",
-      "codename":"zerofltexx",
-      "support_level": "6",
-      "support_status": "privateonly",
-      "supported_versions":[
-         {
-            "version_code":"XOS-9.0",
-            "version_name":"Pie"
-         }
-      ]
-   }
 ]
